@@ -1,0 +1,30 @@
+
+<body>
+  <h1>Quara posts</h1>
+
+  <%for (post of posts) {%>
+    <div>
+      <h2>
+        @<%=post.username  %>
+      </h2>
+      <h4>constent: 
+        <%=post.content%>
+      </h4>
+      <p>HOBBY: 
+        <%= post.hobbi %> 
+      </p><button><a href="http://localhost:3000/posts/<%= post.id %>">seen the data</a></button>
+      <button><a href="http://localhost:3000/posts/<%= post.id %>/edit">edit</a></button>
+  <br><form action="/posts/<%= post.id %>?_method=DELETE" method="post">
+    <button>delete post</button>
+  </form>
+
+
+    </div><hr style="color: cornflowerblue;"><br> 
+
+ <% }%><br /> <br /><button style="border: 0px; font-size: 20px; background-color: black; color: white; border-radius: 10px; -webkit-text-fill-color: wheat;"> <a href="http://localhost:3000/posts/new">create new posts</a></button>
+
+
+
+  <%- include("include/index.ejs") %>
+</body>
+</html>
