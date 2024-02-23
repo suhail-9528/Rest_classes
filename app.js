@@ -71,4 +71,4 @@ app.delete("/posts/:id",(req,res)=>{
 app.get("/",(req,res)=>{ 
   res.render("index.ejs")
 })
-app.listen(port,()=>{console.log("successfull listen ",port)})
+app.listen(port,()=>{console.log("successfull listen ",port)});
